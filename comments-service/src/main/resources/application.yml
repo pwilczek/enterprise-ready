@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: "simple-service"
+    name: "comments-service"
 
 eureka:
   client:
