@@ -7,7 +7,7 @@ server:
 
 zuul:
   routes:
-    simple-service: /zss/**
+    comments-service: /comments/**
 
 eureka:
   client:
