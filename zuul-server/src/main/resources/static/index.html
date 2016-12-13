@@ -5,13 +5,19 @@
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
-        var entApp = entApp || (function(){
+        var entApp = entApp || (function(_$) {
             return {
                 save : function(comment) {
-                    window.alert(comment);
+                    _$.ajax({
+                        type: 'POST',
+                        url: 'http://localhost:8080/comments/add',
+                        data: {'comment': comment},
+                        success: function() {window.alert('consider it done')},
+                        failure: function() {window.alert('holy crap!')}
+                    });
                 }
             }
-        })();
+        })($);
         debugger;
     </script>
 </head>
