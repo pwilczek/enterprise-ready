@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var entApp = entApp || (function(){
+            return {
+                save : function(comment) {
+                    window.alert(comment);
+                }
+            }
+        })();
+        debugger;
+    </script>
+</head>
+<body>
+    <h1>Welcome to Enterprise Ready App!</h1>
+    <p>Put some comment and press the button to store data in Enterprise Ready App.</p>
+    <textarea id="comment" rows="2" cols="30"></textarea><br/>
+    <button type="button" onclick="entApp.save($('#comment').val())">Save</button>
+</body>
+</html>
